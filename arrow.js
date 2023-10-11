@@ -1,13 +1,7 @@
-function outer() {
-    return 'hello';
+function outerOne(a) {
+    function innerOne(b) {
+        console.log(b);
+    }
+    innerOne(a);
 }
-
-const outerTwo = function () {
-    return 'bye';
-};
-
-const outerThree = () => 'wow';
-
-console.log(outer());
-console.log(outerTwo());
-console.log(outerThree());
+console.log(outerOne('hello'));
